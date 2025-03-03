@@ -1,1 +1,132 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .radio-group, .checkbox-group {
+            text-align: left;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Comprehensive Survey Form</h2>
+        <p>Please take a few minutes to complete this survey.</p>
+        <form action="#" method="post">
+            
+            <!-- Personal Information -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="" selected disabled>--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Preferences -->
+            <label>How did you hear about us?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="source" value="Social Media" required> Social Media</label>
+                <label><input type="radio" name="source" value="Friends"> Friends</label>
+                <label><input type="radio" name="source" value="Website"> Website</label>
+                <label><input type="radio" name="source" value="Advertisement"> Advertisement</label>
+            </div>
+
+            <label>What features do you like about our service?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="features" value="Quality"> Quality</label>
+                <label><input type="checkbox" name="features" value="Support"> Support</label>
+                <label><input type="checkbox" name="features" value="Pricing"> Pricing</label>
+                <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+            </div>
+
+            <!-- Satisfaction Ratings -->
+            <label>How satisfied are you with our service?</label>
+            <div class="rating">
+                <label><input type="radio" name="satisfaction" value="1"> 1</label>
+                <label><input type="radio" name="satisfaction" value="2"> 2</label>
+                <label><input type="radio" name="satisfaction" value="3"> 3</label>
+                <label><input type="radio" name="satisfaction" value="4"> 4</label>
+                <label><input type="radio" name="satisfaction" value="5"> 5</label>
+            </div>
+
+            <!-- Open-ended Questions -->
+            <label for="feedback">Additional Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your comments..."></textarea>
+
+            <label for="suggestions">What improvements would you like to see?</label>
+            <textarea id="suggestions" name="suggestions" rows="4" placeholder="Your suggestions..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+
+</body>
+</html>
